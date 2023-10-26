@@ -28,7 +28,6 @@ echo.
 echo Treffe eine Auswahl
 echo =====================
 echo.
-echo [b]BackUP's
 echo [m]Module Setup
 echo.
 echo [f]Finish Setup
