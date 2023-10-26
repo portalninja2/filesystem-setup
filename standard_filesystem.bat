@@ -72,7 +72,7 @@ goto Auswahlmenue
 cls
 @title PortableDownload
 cd apps
-curl https://www.heise.de/download/product/portableapps.com-platform-portableapps-suite-38804/download/danke?id=92a6a080-8e66-4959-8687-a5a0e870fca7 --ssl-no-revoke
+curl --output apps\portable.exe https://portableapps.com/downloading/?a=PortableApps.comPlatform&s=s&d=pa&n=The%20PortableApps.com%20Platform&f=PortableApps.com_Platform_Setup_26.2.3.paf.exe --ssl-no-revoke
 cls
 :QOpenPortable
 @title PortableInstallation
