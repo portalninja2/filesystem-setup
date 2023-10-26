@@ -9,6 +9,7 @@ mkdir Musik
 mkdir Zip's
 mkdir apps
 mkdir Scripts\vorgefertigt
+mkdir Scripts\modules
 mkdir Scripts\bearbeitung
 mkdir Scripts\fertig
 mkdir Scripts\neu
