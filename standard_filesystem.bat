@@ -12,6 +12,9 @@ mkdir Scripts\vorgefertigt
 mkdir Scripts\bearbeitung
 mkdir Scripts\fertig
 mkdir Scripts\neu
+mkdir BackUP's\local
+mkdir BackUP's\remote
+cls
 
 echo Ordner Setup fertig. (Wenn das Script fortgesetzt werden soll, beliebige Taste druecken)
 pause >nul
@@ -29,6 +32,9 @@ echo [2]Passwort Setup
 echo [3]Ockla Setup
 echo [4]Programm Setup
 echo [5]Script Setups
+echo [b]BackUP's
+echo [m]Module Setup
+echo.
 echo [f]Finish Setup
 echo.
 
@@ -42,6 +48,8 @@ if %asw%==4 goto ProgrammSetup
 if %asw%==5 goto ScriptSetups
 if %asw%==f goto FinishSetup
 if %asw%==exit goto END
+if %asw%==b goto backupmenue
+if %asw%==m goto modules
 goto Auswahlmenue
 
 :NoteSetup
@@ -99,6 +107,61 @@ goto Auswahlmenue
 cd Scripts
 move ../standard_filesystem.bat old_setup.bat
 END
+
+:backupmenue
+@title BackUP's
+cls
+echo BackUP Aktionen:
+echo =====================
+echo [c] Erstellen eines lokalen BackUP's (Diese Instanz)
+echo [r] BackUP von einem Link erstellen
+echo [m] BackUP von einem anderen Datenträger erstellen
+echo [g] BackUP wiederherstellen (lokal)
+echo [gr] BackUP wiederherstellen (Remote)
+
+echo.
+
+set basw=0
+set /p basw="Triff eine Auswahl: "
+
+if %basw%==c goto lcbackup
+if %basw%==r goto rcbackup
+if %basw%==g goto lwbackup
+if %basw%==gr goto rwbackup
+if %basw%==back goto Auswahlmenue
+
+:lcbackup
+
+echo Beta!
+set name=0
+set /p name="Trage deinen Zusatz Namen ein: "
+set "name=LocalUSB-%name%.zip"
+tar -c -f BackUP's\local\%name% %files%
+set "files=apps Bilder Dokumente Musik	Scripts	Videos	Zip's "
+pause
+goto backupmenue
+
+:rcbackup
+echo coming soon
+pause
+goto backupmenue
+
+:lwbackup
+echo coming soon
+pause
+goto backupmenue
+
+:rwbackup
+echo coming soon
+pause
+goto backupmenue
+
+:modules
+@title module-Setup
+cls
+curl --output USB-Modules.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/start.bat --ssl-no-revoke
+pause >nul
+goto Auswahlmenue
 
 :END
 echo bye
