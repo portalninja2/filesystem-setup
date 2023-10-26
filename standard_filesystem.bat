@@ -106,7 +106,7 @@ goto Auswahlmenue
 :FinishSetup
 cd Scripts
 move ../standard_filesystem.bat old_setup.bat
-END
+goto END
 
 :backupmenue
 @title BackUP's
