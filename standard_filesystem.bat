@@ -28,11 +28,6 @@ echo.
 echo Treffe eine Auswahl
 echo =====================
 echo.
-echo [1]Notizen Setup
-echo [2]Passwort Setup
-echo [3]Ockla Setup
-echo [4]Programm Setup
-echo [5]Script Setups
 echo [b]BackUP's
 echo [m]Module Setup
 echo.
