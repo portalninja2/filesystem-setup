@@ -155,6 +155,11 @@ goto backupmenue
 @title module-Setup
 cls
 curl --output USB-Modules.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/start.bat --ssl-no-revoke
+curl --output Scripts\modules\settings.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/settings.bat --ssl-no-revoke
+curl --output Scripts\modules\standard.txt https://raw.githubusercontent.com/portalninja2/USB-Modules/main/standard.txt --ssl-no-revoke
+curl --output Scripts\modules\Color.txt https://raw.githubusercontent.com/portalninja2/USB-Modules/main/Color.xt --ssl-no-revoke
+curl --output Scripts\modules\shortcut-open.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/shortcuts-open.bat --ssl-no-revoke
+curl --output Scripts\modules\shortcut.bat https://raw.githubusercontent.com/portalninja2/USB-Modules/main/shortcuts.bat --ssl-no-revoke
 pause >nul
 goto Auswahlmenue
 
