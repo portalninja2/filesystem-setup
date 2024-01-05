@@ -12,6 +12,7 @@ mkdir Scripts\vorgefertigt
 mkdir Scripts\modules
 mkdir Scripts\bearbeitung
 mkdir Scripts\fertig
+mkdir Scripts\datas
 mkdir Scripts\neu
 mkdir BackUP's\local
 mkdir BackUP's\remote
